@@ -27,3 +27,23 @@ var application = {
         return this;
     }
 };
+
+/**
+ * Of course, it's very easy to augment the object...
+ */
+application.moduleOne = {
+    name: 'Module One',
+
+    version: 'v0.0.2',
+
+    init: function () {
+        'use strict';
+
+        return this.name + ' was loaded successfully!';
+    },
+
+    appInfo: function () {
+        'use strict';
+        return this.name + ', ' + this.version + ', is part of ' + application.name + '!';
+    }
+};
